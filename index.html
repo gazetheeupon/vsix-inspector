@@ -65,6 +65,38 @@
   .privacy{font-size:.85rem;color:var(--muted);}
   .privacy strong{color:var(--text);}
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "My file won't open at all",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A .vsix is a ZIP archive with an extension.vsixmanifest file at its root. If this page can't find that file, either the archive isn't actually a VSIX package, or it's corrupted \u2014 try re-downloading it."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "\"What it registers\" section is missing",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "That section is built from the extension's own package.json , referenced by the manifest. If that file is missing or isn't valid JSON, this page shows a note explaining why and still displays everything else it could read."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I install the extension from here?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No \u2014 this page only inspects the package. To install it, use VS Code's own Extensions view (\"Install from VSIX\u2026\") or code --install-extension yourfile.vsix on the command line."
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <header>
